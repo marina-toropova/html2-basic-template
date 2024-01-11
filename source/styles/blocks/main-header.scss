@@ -9,6 +9,11 @@
   align-items: center;
   grid-template-columns: 32px 88px 60px 60px 60px;
   grid-template-areas: "logo . account basket nav";
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 82px 67px 400px 60px 60px 60px;
+    grid-template-areas: "logo . nav . account basket";
+  }
 }
 
 .main-header__logo {

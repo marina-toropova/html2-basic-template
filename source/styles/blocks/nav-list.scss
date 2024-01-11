@@ -27,6 +27,10 @@
 
   @media (min-width: $tablet) {
     flex-direction: row;
+    background-color: transparent;
+    position: static;
+    min-height: auto;
+    width: auto;
   }
 
   @media (min-width: $desktop) {
