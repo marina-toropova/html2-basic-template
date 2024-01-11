@@ -2,12 +2,50 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="main-header" data-test="header">
+      <div class="main-header__container container">
+
+        <a href="#" class="main-header__logo logo">
+        <img src="./images/logo-mobile.svg" width="32" height="36" alt="Логотип.">
+        </a>
+
+        <a href="#" class="main-header__account">
+        <img src="./images/account.svg" width="60" height="60" alt="Вход.">
+        </a>
+
+        <a href="#" class="main-header__basket">
+        <img src="./images/basket.svg" width="60" height="60" alt="Корзина.">
+        </a>
+
+        <nav class="main-header__nav nav nav--closed">
+
+          <button class="nav__toggle nav__button--closed button" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+
+          <ul class="nav__list nav-list nav-list--closed nav-list--index">
+            <li class="nav__item">
+              <a class="nav__link nav__link--current">главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="catalog.html">каталог</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="form.html">доставка</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="form.html">о нас</a>
+            </li>
+          </ul>
+
+        </nav>
+      </div>
+    </header>
   </body>
 </html>

@@ -1,0 +1,32 @@
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include list-reset;
+  background-color: $base-white;
+  width: 100%;
+
+  @media (max-width: $tablet - 1px) {
+    position: absolute;
+    z-index: 2;
+  }
+
+  &--closed {
+    @media (max-width: $tablet - 1px) {
+      display: none;
+    }
+  }
+
+  &--opened {
+    display: flex;
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: transparent;
+  }
+}

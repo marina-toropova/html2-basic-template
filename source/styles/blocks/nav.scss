@@ -1,0 +1,30 @@
+.nav {
+  @media (max-width: $tablet) {
+    position: relative;
+  }
+
+  &--closed {
+    .nav__toggle::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 12px;
+      background-image: url("../../images/menu.svg");
+      top: 22px;
+      right: 22px;
+    }
+  }
+}
+
+.nav__toggle {
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+/*   position: absolute; */
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}

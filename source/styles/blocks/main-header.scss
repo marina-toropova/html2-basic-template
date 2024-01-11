@@ -1,0 +1,28 @@
+.header {
+  background-color: $base-white;
+  color: #ffffff;
+  padding: 10px 15px;
+}
+
+.main-header__container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 32px 88px 60px 60px 60px;
+  grid-template-areas: "logo . account basket nav";
+}
+
+.main-header__logo {
+  grid-area: logo;
+}
+
+.main-header__account {
+  grid-area: account;
+}
+
+.main-header__basket {
+  grid-area: basket;
+}
+
+.main-header__nav {
+  grid-area: nav;
+}
