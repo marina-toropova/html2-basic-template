@@ -14,6 +14,18 @@
       right: 22px;
     }
   }
+
+  &--opened {
+    .nav__toggle::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-image: url("../../images/stroke.svg");
+      top: 23px;
+      right: 24px;
+    }
+  }
 }
 
 .nav__toggle {
@@ -26,5 +38,109 @@
 
   @media (min-width: $tablet) {
     display: none;
+  }
+}
+
+.nav__list {
+  @media (max-width: $tablet - 1px) {
+    width: 100vw;
+    left: -20px;
+    overflow: hidden;
+    min-height: 199px;
+  }
+}
+
+.nav__item {
+  position: relative;
+
+  @media (max-width: $tablet - 1px) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 1000vw;
+      background-color: $light-grey;
+      display: block;
+      left: -1000%;
+    }
+  }
+
+  &:first-child {
+    @media (min-width: $tablet) {
+      margin-right: 36px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: 36px;
+    }
+  }
+
+  &:nth-child(2) {
+    @media (min-width: $tablet) {
+      margin-right: 36px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: 34px;
+    }
+  }
+
+  &:last-child {
+    @media (max-width: $tablet - 1px) {
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 1000vw;
+        background-color: $light-grey;
+        display: block;
+        left: -1000%;
+      }
+    }
+  }
+}
+
+.nav__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-black;
+  text-transform: uppercase;
+  position: relative;
+  padding: 20px 0;
+  display: block;
+
+  @media (min-width: $tablet) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 15px 0 31px;
+  }
+
+  @media (min-width: $desktop) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--current::after {
+    @media (min-width: $tablet) {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+/*       background-color: @green; */
+      bottom: 21px;
+      left: 0;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
