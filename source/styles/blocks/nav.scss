@@ -88,7 +88,7 @@
   color: $base-black;
   text-transform: uppercase;
   position: relative;
-  padding: 20px 0;
+  padding: 20px 139.5px;
   display: block;
 
   @media (min-width: $tablet) {
@@ -113,12 +113,22 @@
     }
   }
 
-  &:hover {
-    opacity: 0.6;
+  &:hover,
+  &:focus {
+    @media (min-width: $tablet) {
+      color: $base-primary;
+    }
   }
 
   &:active {
-    opacity: 0.3;
+    @media (max-width: $only-mobile) {
+      background-color: $base-secondary;
+    }
+
+    @media (min-width: $tablet) {
+      color: $base-primary;
+      background-color: $base-secondary;
+    }
   }
 }
 

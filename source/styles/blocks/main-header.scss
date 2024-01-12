@@ -21,7 +21,7 @@
 
   @media (min-width: $desktop) {
     grid-template-areas: "logo . nav . account . basket";
-    grid-template-columns: 316px 162px 459px 182px 72px 60px 89px;
+    grid-template-columns: 316px 162px 459px 162px 112px 20px 129px;
   }
 }
 
@@ -32,12 +32,37 @@
   align-items: center;
 }
 
+
+.main-header__link {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $desktop) {
+    padding: 32px 20px;
+
+    &:hover,
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:hover,
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:active {
+      background-color: $base-secondary;
+    }
+  }
+}
+
 .main-header__account {
   grid-area: account;
 
   span {
     display: none;
     text-transform: uppercase;
+    position: relative;
 
     @media (min-width: $desktop) {
       display: block;
