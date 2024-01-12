@@ -21,7 +21,7 @@
 
   @media (min-width: $desktop) {
     grid-template-areas: "logo . nav . account . basket";
-    grid-template-columns: 316px 162px 459px 162px 112px 20px 129px;
+    grid-template-columns: 316px 162px 491px 129px 112px 20px 129px;
   }
 }
 
@@ -112,6 +112,6 @@
 
   @media (min-width: $desktop) {
     display: block;
-    width: 126px;
+    width: 129px;
   }
 }

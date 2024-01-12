@@ -34,7 +34,6 @@
   border: none;
   cursor: pointer;
   background-color: transparent;
-/*   position: absolute; */
 
   @media (min-width: $tablet) {
     display: none;
@@ -58,7 +57,7 @@
       content: "";
       position: absolute;
       height: 1px;
-      width: 1000vw;
+      width: 10000vw;
       background-color: $base-secondary;
       display: block;
       left: -1000%;
@@ -90,6 +89,7 @@
   position: relative;
   padding: 20px 139.5px;
   display: block;
+  min-width: 100px;
 
   @media (min-width: $tablet) {
     padding: 32px 21px;

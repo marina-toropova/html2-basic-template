@@ -5,9 +5,12 @@
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
+
     <header class="main-header" data-test="header">
       <div class="main-header__container container">
 
@@ -63,5 +66,73 @@
         </nav>
       </div>
     </header>
+
+    <main>
+      <section class="hero">
+        <h1 class="visually-hidden">Интернет-магазин кофе в банке.</h1>
+        <div class="slider">
+
+          <button class="slider__button slider__button--previous">
+            <span class="visually-hidden">Предыдущее фото.</span>
+          </button>
+
+          <button class="slider__button slider__button--next">
+            <span class="visually-hidden">Следующее фото.</span>
+          </button>
+
+          <div class="slider__container container">
+            <ul class="slider__list slider-line">
+
+              <li class="slider__item">
+                <a href="#" class="slider__link">
+                  <picture>
+                    <source type="image/webp" srcset="images/flat-white-decaf-mobile.webp, images/flat-white-decaf-mobile@2x.webp 2x" width="280" height="280">
+                    <img src="images/flat-white-decaf-mobile.png" srcset="images/flat-white-decaf-mobile@2x.png 2x" loading="lazy" alt="Флет Уайт без кофеина в банке." width="280" height="280">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="slider__item">
+                <a href="#" class="slider__link">
+                  <picture>
+                    <source type="image/webp" srcset="images/lavender-latte-mobile.webp, images/lavender-latte-mobile@2x.webp 2x" width="280" height="280">
+                    <img src="images/lavender-latte-mobile.png" srcset="images/lavender-latte-mobile@2x.png 2x" loading="lazy" alt="Лавандовый латте в банке." width="280" height="280">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="slider__item">
+                <a href="#" class="slider__link">
+                  <picture>
+                    <source type="image/webp" srcset="images/triple-espresso-mobile.webp, images/triple-espresso-mobile@2x.webp 2x" width="280" height="280">
+                    <img src="images/triple-espresso-mobile.png" srcset="images/triple-espresso-mobile@2x.png 2x" loading="lazy" alt="Лавандовый латте в банке." width="280" height="280">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+
+            <span class="slider__text">Новинка!</span>
+            <h2 class="slider__title">Декаф Флэт Уайт</h2>
+            <p class="slider__description">
+              Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+            </p>
+
+            <div class="slider__price-order-wrapper">
+              <span class="slider__price slider__price--strikethrough">295₽</span>
+              <span class="slider__price">225₽</span>
+              <a href="#" class="slider__order-link button">Заказать</a>
+            </div>
+
+            <div class="slider__wrapper">
+              <div class="slider__dot slider__dot--active"></div>
+              <div class="slider__dot"></div>
+              <div class="slider__dot"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+    </main>
   </body>
 </html>
