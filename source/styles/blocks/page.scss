@@ -9,9 +9,11 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   font-family: $montserrat, arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-/*   color: @base-text-color; */
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-black;
+  font-weight: 500;
+/*   letter-spacing: 0.24px; */
   background-color: $base-white;
   overflow-x: hidden;
 }

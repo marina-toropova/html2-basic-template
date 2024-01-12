@@ -59,7 +59,7 @@
       position: absolute;
       height: 1px;
       width: 1000vw;
-      background-color: $light-grey;
+      background-color: $base-secondary;
       display: block;
       left: -1000%;
     }
@@ -72,7 +72,7 @@
         position: absolute;
         height: 1px;
         width: 1000vw;
-        background-color: $light-grey;
+        background-color: $base-secondary;
         display: block;
         left: -1000%;
       }
@@ -95,15 +95,9 @@
     padding: 32px 21px;
   }
 
-  @media (min-width: $desktop) {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-  }
-
   &--current {
     @media (min-width: $tablet) {
-      color: $base-current;
+      color: $base-primary;
     }
   }
 
@@ -113,7 +107,7 @@
       position: absolute;
       height: 2px;
       width: 100%;
-      background-color: $base-current;
+      background-color: $base-primary;
       bottom: 0;
       left: 0;
     }
@@ -125,5 +119,15 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.nav__button {
+  &--closed {
+    @media (max-width: $only-mobile) {
+      &:active {
+        background-color: $base-secondary;
+      }
+    }
   }
 }

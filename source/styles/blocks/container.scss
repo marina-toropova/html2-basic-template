@@ -1,4 +1,8 @@
 .container {
-  width: calc(100% - 40px); // 280px
+  width: calc(100% - 40px);
   margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    width: calc(100% - 80px);
+  }
 }

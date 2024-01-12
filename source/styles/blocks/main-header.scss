@@ -14,20 +14,69 @@
     grid-template-columns: 82px 67px 400px 60px 60px 60px;
     grid-template-areas: "logo . nav . account basket";
   }
+
+  @media (min-width: $tablet + 1px) {
+    grid-template-columns: 82px 67px 400px auto 60px 60px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-areas: "logo . nav . account . basket";
+    grid-template-columns: 316px 162px 459px 182px 72px 60px 89px;
+  }
 }
 
 .main-header__logo {
   grid-area: logo;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
 }
 
 .main-header__account {
   grid-area: account;
+
+  span {
+    display: none;
+    text-transform: uppercase;
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    gap: 8px;
+  }
 }
 
 .main-header__basket {
   grid-area: basket;
+
+  span {
+    display: none;
+    text-transform: uppercase;
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    gap: 8px;
+  }
 }
 
 .main-header__nav {
   grid-area: nav;
+}
+
+.main-header__text {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    width: 126px;
+  }
 }
