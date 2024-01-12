@@ -53,6 +53,16 @@
     &:active {
       background-color: $base-secondary;
     }
+
+    &:hover path,
+    &:focus path,
+    &:active path {
+      fill: $base-primary;
+    }
+
+    &:active path {
+      background-color: $base-secondary;
+    }
   }
 }
 
