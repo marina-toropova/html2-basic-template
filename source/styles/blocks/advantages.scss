@@ -1,0 +1,95 @@
+.advantages__container {
+  padding: 50px 0 60px;
+}
+
+.advantages__title {
+  color: $base-primary;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.advantages__subtitle {
+  text-align: center;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.advantages__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 56px;
+    left: 41%;
+  }
+
+  &--speed {
+    padding-top: 101px;
+
+    &::before {
+      width: 50px;
+      top: 35px;
+      background-image: url("../../images/icons/features-speed.svg");
+    }
+  }
+
+  &--comfort {
+    padding-top: 98px;
+
+    &::before {
+      width: 52px;
+      top: 32px;
+      background-image: url("../../images/icons/features-comfort.svg");
+    }
+  }
+
+  &--freshness {
+    padding-top: 98px;
+
+    &::before {
+      width: 42px;
+      top: 32px;
+      left: 42%;
+      background-image: url("../../images/icons/features-freshness.svg");
+    }
+  }
+
+  &--eco-friendliness {
+    padding-top: 98px;
+
+    &::before {
+      width: 46px;
+      top: 32px;
+      left: 42%;
+      background-image: url("../../images/icons/features-eco-friendliness.svg");
+    }
+  }
+}
+
+.advantages__subject {
+  text-align: center;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0;
+}
+
+.advantages__text {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+  margin-top: 4px;
+}

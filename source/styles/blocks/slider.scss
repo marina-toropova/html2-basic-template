@@ -1,15 +1,15 @@
 .slider {
   position: relative;
-  max-width: 320px;
+/*   min-width: 320px; */
   min-height: 656px;
 
   @media (min-width: $tablet) {
-    max-width: 768px;
+/*     max-width: 768px; */
     min-height: 640px;
   }
 
   @media (min-width: $desktop) {
-    max-width: 1440px;
+/*     max-width: 1440px; */
     min-height: 714px;
   }
 }
