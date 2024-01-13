@@ -28,11 +28,13 @@
 
 .slider__button--previous {
   left: 0;
+  cursor: pointer;
 }
 
 .slider__button--next {
   right: 0;
   mask-image: url(../../images/icons/arrow-slider-right.svg);
+  cursor: pointer;
 }
 
 .slider__text {
