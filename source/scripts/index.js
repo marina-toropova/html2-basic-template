@@ -36,18 +36,27 @@ window.addEventListener('resize', showSlide);
 
 // Функции
 
+// Указывает какой слайд по счету активен
+
+const thisSlide = (index) => {
+  sliderDots.forEach(item => item.classList.remove('slider__dot--active'));
+  sliderDots[index].classList.add('slider__dot--active');
+}
+
+// Задает шаг перемещения слайдов
+
+const rollSlider = () => {
+  sliderLine.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
+};
+
 // Задает нужную ширину слайду
 
 const showSlide = () => {
   sliderWidth = document.querySelector('.slider__container').offsetWidth;
   sliderLine.style.width = (sliderWidth * sliderImages.length) + 'px';
   sliderImages.forEach(item => item.style.width = sliderWidth + 'px');
-};
 
-// Задает шаг перемещения слайдов
-
-const rollSlider = () => {
-  sliderLine.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
+  rollSlider();
 };
 
 // Перелистывает слайд вперед
@@ -58,12 +67,11 @@ const nextSlide = () => {
   if (sliderCount >= sliderImages.length) {
     sliderButtonNext.disabled = true;
     sliderCount = sliderImages.length - 1;
-/*      */
   }
   heroSection.style.backgroundColor = BACKGROUND_COLOURS[sliderCount];
 
   rollSlider();
-/*   thisSlide(sliderCount); */
+  thisSlide(sliderCount);
 };
 
 // Перелистывает слайд назад
@@ -78,8 +86,19 @@ const previousSlide = () => {
   heroSection.style.backgroundColor = BACKGROUND_COLOURS[sliderCount];
 
   rollSlider();
-/*   thisSlide(sliderCount); */
+  thisSlide(sliderCount);
 };
+
+// Вешает клик на дот
+
+sliderDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    sliderCount = index;
+    rollSlider();
+    thisSlide(sliderCount);
+    heroSection.style.backgroundColor = BACKGROUND_COLOURS[sliderCount];
+  });
+});
 
 // Кнопки листания слайдов вперед и назад
 

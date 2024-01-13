@@ -36,12 +36,13 @@
 
   @media (min-width: $desktop) {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 56% 2% 45% 6%;
+    grid-template-columns: 51% 49%;
     grid-template-areas:
-      "image text"
-      "image title"
-      "image description"
-      "image wrapper";
+      ". text"
+      ". title"
+      ". description"
+      ". wrapper";
   }
 }
 
@@ -52,8 +53,8 @@
   }
 
   @media (min-width: $desktop) {
-    position: static;
-    grid-area: image;
+    top: 30px;
+    left: 65px;
   }
 }
 
@@ -119,6 +120,8 @@
 
   @media (min-width: $desktop) {
     grid-area: text;
+    margin: 145px 0 0 0;
+    justify-self: self-start;
   }
 }
 
@@ -139,6 +142,7 @@
 
   @media (min-width: $desktop) {
     grid-area: title;
+    text-align: left;
   }
 }
 
@@ -159,6 +163,7 @@
 
   @media (min-width: $desktop) {
     grid-area: description;
+    text-align: left;
   }
 }
 
@@ -183,6 +188,10 @@
 
 .slider__order-link {
   margin-left: 14px;
+
+  @media (min-width: $desktop) {
+    margin-left: 16px;
+  }
 }
 
 .slider__price-order-wrapper {
@@ -197,5 +206,27 @@
 
   @media (min-width: $desktop) {
     grid-area: wrapper;
+  }
+}
+
+.slider__wrapper {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: flex;
+    column-gap: 8px;
+    position: absolute;
+    bottom: 70px;
+    left: 43%;
+  }
+}
+
+.slider__dot {
+  width: 62px;
+  height: 4px;
+  background-color: $base-white;
+
+  &--active {
+    background-color: $base-primary;
   }
 }
