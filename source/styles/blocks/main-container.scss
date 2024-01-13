@@ -1,0 +1,7 @@
+.main-container {
+  overflow-x: hidden;
+
+  @media (min-width: $tablet) {
+    position: relative;
+  }
+}

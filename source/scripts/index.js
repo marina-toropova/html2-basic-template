@@ -32,6 +32,8 @@ const heroSection = document.querySelector('.hero');
 let sliderCount = 0;
 let sliderWidth;
 
+window.addEventListener('resize', showSlide);
+
 // Функции
 
 // Задает нужную ширину слайду
@@ -83,6 +85,6 @@ const previousSlide = () => {
 
 sliderButtonNext.addEventListener('click', nextSlide);
 sliderButtonPrevious.addEventListener('click', previousSlide);
-window.addEventListener('resize', showSlide);
+window.removeEventListener('resize', showSlide);
 
 showSlide();
