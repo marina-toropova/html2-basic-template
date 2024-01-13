@@ -225,6 +225,7 @@
   width: 62px;
   height: 4px;
   background-color: $base-white;
+  cursor: pointer;
 
   &--active {
     background-color: $base-primary;
