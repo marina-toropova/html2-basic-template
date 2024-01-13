@@ -1,5 +1,7 @@
 /* в этот файл добавляет скрипты*/
 
+const BACKGROUND_COLOURS = ['#F3EBE1', '#EAE6FC', '#E5E6E8'];
+
 // Бургер меню
 
 const navMain = document.querySelector('.nav');
@@ -50,9 +52,13 @@ const rollSlider = () => {
 
 const nextSlide = () => {
   sliderCount++;
+  sliderButtonPrevious.disabled = false;
   if (sliderCount >= sliderImages.length) {
-    sliderCount = 0;
+    sliderButtonNext.disabled = true;
+    sliderCount = sliderImages.length - 1;
+/*      */
   }
+  heroSection.style.backgroundColor = BACKGROUND_COLOURS[sliderCount];
 
   rollSlider();
 /*   thisSlide(sliderCount); */
@@ -62,9 +68,12 @@ const nextSlide = () => {
 
 const previousSlide = () => {
   sliderCount--;
+  sliderButtonNext.disabled = false;
   if (sliderCount < 0) {
-    sliderCount = sliderImages.length - 1;
+    sliderButtonPrevious.disabled = true;
+    sliderCount = 0;
   }
+  heroSection.style.backgroundColor = BACKGROUND_COLOURS[sliderCount];
 
   rollSlider();
 /*   thisSlide(sliderCount); */
