@@ -1,5 +1,9 @@
 .advantages__container {
   padding: 50px 0 60px;
+
+  @media (min-width: $tablet) {
+    padding: 60px 0 100px;
+  }
 }
 
 .advantages__title {
@@ -17,12 +21,25 @@
   line-height: 36px;
   margin: 0;
   margin-top: 5px;
+
+  @media (min-width: $tablet) {
+    font-size: 42px;
+    line-height: 64px;
+  }
 }
 
 .advantages__list {
   @include list-reset;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 50px;
+    margin-top: 60px;
+  }
 }
 
 .advantages__item {
@@ -33,6 +50,11 @@
     position: absolute;
     height: 56px;
     left: 41%;
+
+    @media (min-width: $tablet) {
+      top: 0;
+      left: 0;
+    }
   }
 
   &--speed {
@@ -42,6 +64,11 @@
       width: 50px;
       top: 35px;
       background-image: url("../../images/icons/features-speed.svg");
+
+      @media (min-width: $tablet) {
+        top: 3px;
+        left: 10px;
+      }
     }
   }
 
@@ -52,6 +79,11 @@
       width: 52px;
       top: 32px;
       background-image: url("../../images/icons/features-comfort.svg");
+
+      @media (min-width: $tablet) {
+        top: -1px;
+        left: 10px;
+      }
     }
   }
 
@@ -63,6 +95,11 @@
       top: 32px;
       left: 42%;
       background-image: url("../../images/icons/features-freshness.svg");
+
+      @media (min-width: $tablet) {
+        top: -1px;
+        left: 15px;
+      }
     }
   }
 
@@ -76,6 +113,11 @@
       background-image: url("../../images/icons/features-eco-friendliness.svg");
     }
   }
+
+  @media (min-width: $tablet) {
+    width: 339px;
+    padding: 0 0 0 82px;
+  }
 }
 
 .advantages__subject {
@@ -83,6 +125,12 @@
   font-size: 18px;
   line-height: 32px;
   margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: left;
+  }
 }
 
 .advantages__text {
@@ -92,4 +140,11 @@
   line-height: 20px;
   margin: 0;
   margin-top: 4px;
+
+  @media (min-width: $tablet) {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 10px;
+  }
 }

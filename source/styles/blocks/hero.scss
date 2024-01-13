@@ -1,3 +1,9 @@
 .hero {
   background-color: $background-flat-white;
 }
+
+.hero__container {
+  @media (min-width: $tablet) {
+    margin-bottom: 188px;
+  }
+}
