@@ -1,0 +1,79 @@
+.catalog-list__label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.catalog-list__select {
+  font-family: $montserrat;
+  color: $base-primary;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  border: none;
+  background: transparent;
+  width: 153px;
+  margin-left: 13px;
+}
+
+.catalog-list__items {
+  @include list-reset;
+  margin-top: 19px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.catalog-list__item {
+  background-color: $base-white;
+  padding: 40px 20px 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-list__link {
+  align-self: center;
+}
+
+.catalog-list__heading {
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.catalog-list__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+  margin-top: 4px;
+  width: 238px;
+}
+
+.catalog-list__item-price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.catalog-list__button {
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.catalog-list__price-and-cart-wrapper {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.catalog-list__pagination {
+  margin-top: 49px;
+}

@@ -35,6 +35,14 @@
   cursor: pointer;
   background-color: transparent;
 
+  &--closed {
+    @media (max-width: $only-mobile) {
+      &:active {
+        background-color: $base-secondary;
+      }
+    }
+  }
+
   @media (min-width: $tablet) {
     display: none;
   }
@@ -128,16 +136,6 @@
     @media (min-width: $tablet) {
       color: $base-primary;
       background-color: $base-secondary;
-    }
-  }
-}
-
-.nav__button {
-  &--closed {
-    @media (max-width: $only-mobile) {
-      &:active {
-        background-color: $base-secondary;
-      }
     }
   }
 }

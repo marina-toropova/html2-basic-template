@@ -1,0 +1,106 @@
+.filter-group__list {
+  margin-top: 20px;
+
+  @include list-reset;
+/*   display: flex;
+  flex-direction: column; */
+}
+
+.filter-group__item {
+  margin-top: 20px;
+}
+
+.filter-group__label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.filter-group__control {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+
+  &--country {
+    padding-left: 52px;
+  }
+}
+
+.filter-group__mark {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $base-grey;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filter-group__input[type="radio"]:checked + .filter-group__mark::before {
+  position: absolute;
+  top: 12%;
+  left: 12%;
+  width: 16px;
+  height: 16px;
+  background-color: $base-primary;
+  border-radius: 50%;
+  content: "";
+}
+
+.filter-group__input[type="radio"]:checked + .filter-group__mark {
+  border-color: $base-primary;
+}
+
+.filter-group__input[type="radio"]:disabled + .filter-group__mark {
+  border-color: $alt-light-grey;
+}
+
+.filter-group__input[type="radio"] ~ .filter-group__control .filter-group__label {
+  color: $base-grey;
+}
+
+.filter-group--country {
+  .filter-group__mark {
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    background-color: $base-grey;
+    border: none;
+    transition: 0.4s;
+    border-radius: 34px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 21px;
+      width: 20px;
+      left: 2px;
+      bottom: 2px;
+      background-color: $base-white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+  }
+
+  .filter-group__control {
+    padding-left: 52px;
+  }
+}
+
+.filter-group__input[type="checkbox"]:checked + .filter-group__mark {
+  background-color: $base-primary;
+}
+
+.filter-group__input[type="checkbox"]:checked + .filter-group__mark::before {
+  transform: translateX(18px);
+}
+
+.filter-group__input[type="checkbox"]:disabled + .filter-group__mark {
+  background-color: $alt-light-grey;
+}
+
+.filter-group__input[type="checkbox"]:checked:disabled + .filter-group__mark::before {
+  background-color: $base-grey;
+}

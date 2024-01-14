@@ -1,4 +1,5 @@
 .button {
+  font-family: $montserrat;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 400;
@@ -8,6 +9,7 @@
   background-color: $base-primary;
   color: $base-white;
   cursor: pointer;
+  border: none;
 
   &:hover,
   &:focus {
@@ -20,5 +22,17 @@
 
   &:disabled {
     background-color: $base-grey;
+  }
+
+  &--reset {
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+      color: $base-white;
+    }
+    &:disabled {
+      background-color: $alt-light-grey;
+    }
   }
 }

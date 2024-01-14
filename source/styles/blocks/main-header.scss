@@ -36,6 +36,7 @@
 .main-header__link {
   display: flex;
   justify-content: center;
+  padding-bottom: 4px;
 
   @media (min-width: $desktop) {
     padding: 32px 20px;

@@ -32,16 +32,18 @@ const heroSection = document.querySelector('.hero');
 let sliderCount = 0;
 let sliderWidth;
 
-window.addEventListener('resize', showSlide);
+window.addEventListener('resize', () => {
+  showSlide();
+});
 
 // Функции
 
 // Указывает какой слайд по счету активен
 
 const thisSlide = (index) => {
-  sliderDots.forEach(item => item.classList.remove('slider__dot--active'));
+  sliderDots.forEach((item) => item.classList.remove('slider__dot--active'));
   sliderDots[index].classList.add('slider__dot--active');
-}
+};
 
 // Задает шаг перемещения слайдов
 
@@ -51,13 +53,13 @@ const rollSlider = () => {
 
 // Задает нужную ширину слайду
 
-const showSlide = () => {
+function showSlide () {
   sliderWidth = document.querySelector('.slider__container').offsetWidth;
   sliderLine.style.width = (sliderWidth * sliderImages.length) + 'px';
   sliderImages.forEach(item => item.style.width = sliderWidth + 'px');
 
   rollSlider();
-};
+}
 
 // Перелистывает слайд вперед
 
@@ -104,6 +106,13 @@ sliderDots.forEach((dot, index) => {
 
 sliderButtonNext.addEventListener('click', nextSlide);
 sliderButtonPrevious.addEventListener('click', previousSlide);
-window.removeEventListener('resize', showSlide);
 
 showSlide();
+window.addEventListener('load', showSlide);
+window.removeEventListener('resize', showSlide);
+window.removeEventListener('load', showSlide);
+
+// Формы
+
+/* const disabledInput = document.querySelectorAll('input:disabled');
+const labelText = document.querySelectorAll('filter-group__label'); */

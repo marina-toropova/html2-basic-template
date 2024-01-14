@@ -19,7 +19,6 @@
   display: flex;
   align-items: center;
   transition: all 1s;
-  margin-top: 18px;
 
   @media (min-width: $tablet) {
     margin-top: 0;
@@ -27,6 +26,8 @@
 }
 
 .slider__item {
+  padding-top: 18px;
+
   @media (min-width: $tablet) {
     position: relative;
     display: flex;
@@ -116,7 +117,7 @@
   color: $base-primary;
   text-align: center;
   display: block;
-  margin-top: 60px;
+  margin-top: 6px;
 
   @media (min-width: $desktop) {
     grid-area: text;
@@ -153,6 +154,14 @@
   line-height: 20px;
   text-align: center;
   margin-top: 10px;
+
+  br {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
 
   @media (min-width: $tablet) {
     font-size: 20px;

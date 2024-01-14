@@ -1,0 +1,15 @@
+.programm-selection-form__filter-group {
+  margin-top: 31px;
+}
+
+.programm-selection-form__buttons-wrapper {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.programm-selection-form__button--reset {
+  color: $base-primary;
+  background-color: $base-white;
+}
