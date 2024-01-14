@@ -239,4 +239,13 @@
   &--active {
     background-color: $base-primary;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $alt-primary-opacity;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
 }

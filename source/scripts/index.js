@@ -111,8 +111,3 @@ showSlide();
 window.addEventListener('load', showSlide);
 window.removeEventListener('resize', showSlide);
 window.removeEventListener('load', showSlide);
-
-// Формы
-
-/* const disabledInput = document.querySelectorAll('input:disabled');
-const labelText = document.querySelectorAll('filter-group__label'); */

@@ -61,6 +61,14 @@
   color: $base-grey;
 }
 
+.filter-group__input[type="radio"]:disabled ~ .filter-group__label {
+  color: $base-grey;
+}
+
+.filter-group__input[type="radio"]:checked:disabled ~ .filter-group__mark::before {
+  background-color: $alt-light-grey;
+}
+
 .filter-group--country {
   .filter-group__mark {
     display: inline-block;
@@ -103,4 +111,8 @@
 
 .filter-group__input[type="checkbox"]:checked:disabled + .filter-group__mark::before {
   background-color: $base-grey;
+}
+
+.filter-group__input[type="checkbox"]:disabled ~ .filter-group__label {
+  color: $base-grey;
 }
