@@ -47,6 +47,10 @@
   background-color: $base-primary;
   border-radius: 50%;
   content: "";
+
+  @media (min-width: $tablet) {
+    left: 11%;
+  }
 }
 
 .filter-group__input[type="radio"]:checked + .filter-group__mark {

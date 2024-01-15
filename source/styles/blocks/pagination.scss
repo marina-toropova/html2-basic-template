@@ -5,6 +5,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+  }
 }
 
 .pagination__link {
@@ -19,12 +23,32 @@
 
   span {
     display: none;
+
+    @media (min-width: $tablet) {
+      display: inline-block;
+    }
+  }
+
+  svg {
+    @media (min-width: $tablet) {
+      display: none;
+    }
   }
 
   &--current {
     color: $base-black;
     font-weight: 600;
     line-height: 24px;
+  }
+
+  &--prev {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &--next {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   &:hover,

@@ -208,7 +208,7 @@
         <div class="catalog__container container">
           <h2 class="catalog__title title-primary">Каталог</h2>
           <h3 class="catalog__subtitle title-secondary">Каталог кофейных напитков</h3>
-          <form class="catalog__form programm-selection-form" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="catalog__form programm-selection-form" action="https://echo.htmlacademy.ru/" method="post">
 
             <div class="programm-selection-form__range range">
               <h4 class="range__price title-tertiary">Цена</h4>
@@ -230,7 +230,7 @@
 
             </div>
 
-            <div class="programm-selection-form__filter-group filter-group filter-group--milk">
+            <div class="programm-selection-form__filter-group filter-group filter-group--milk programm-selection-form__filter-group--milk">
               <h4 class="filter-group__title title-tertiary">Наличие молока</h4>
               <ul class="filter-group__list">
                 <li class="filter-group__item">
@@ -264,7 +264,7 @@
               </ul>
             </div>
 
-            <div class="programm-selection-form__filter-group filter-group filter-group--country">
+            <div class="programm-selection-form__filter-group filter-group filter-group--country programm-selection-form__filter-group--country">
               <h4 class="filter-group__title title-tertiary">Страна произрастания</h4>
               <ul class="filter-group__list">
                 <li class="filter-group__item">
@@ -278,8 +278,7 @@
                 <li class="filter-group__item">
                   <label class="filter-group__control">
                     <input class="filter-group__input visually-hidden" type="checkbox" name="Ethiopia">
-                    <span class="filter-group__mark">
-                    </span>
+                      <span class="filter-group__mark"></span>
                     <span class="filter-group__label">Эфиопия</span>
                   </label>
                 </li>
@@ -307,7 +306,6 @@
                     <span class="filter-group__label">Перу</span>
                   </label>
                 </li>
-
               </ul>
             </div>
 
@@ -318,13 +316,16 @@
           </form>
 
           <div class="catalog__list catalog-list">
-            <label class="catalog-list__label" for="select-control">Сортировка:</label>
-            <select class="catalog-list__select" name="select-control" id="select-control">
-              <option value="default">по умолчанию</option>
-              <option value="cheap ">сначала дешевые</option>
-              <option value="expensive ">сначала дорогие</option>
-              <option value="popular">по популярности</option>
-            </select>
+
+            <div class="catalog__label-select-wrapper">
+              <label class="catalog-list__label" for="select-control">Сортировка:</label>
+              <select class="catalog-list__select" name="select-control" id="select-control">
+                <option value="default">по умолчанию</option>
+                <option value="cheap ">сначала дешевые</option>
+                <option value="expensive ">сначала дорогие</option>
+                <option value="popular">по популярности</option>
+              </select>
+            </div>
 
             <ul class="catalog-list__items">
               <li class="catalog-list__item">
@@ -333,7 +334,7 @@
                   <img class="catalog-list__image" loading="lazy" src="images/catalog-flat-white-mobile.jpg" srcset="images/catalog-flat-white-mobile@2x.jpg 2x" alt="Кофе флет-вайт в банке." width="130" height="188">
                 </a>
                 <h3 class="catalog-list__heading">Декаф Флэт Уайт</h3>
-                <p class="catalog-list__text">Кофе без кофеина из Эфиопии
+                <p class="catalog-list__text">Кофе без кофеина из Эфиопии <br>
                   с натуральным фермерским молоком</p>
                 <div class="catalog-list__price-and-cart-wrapper">
                   <b class="catalog-list__item-price">225₽</b>
@@ -350,7 +351,7 @@
                   <img class="catalog-list__image" loading="lazy" src="images/catalog-lavender-mobile.jpg" srcset="images/catalog-lavender-mobile@2x.jpg 2x" alt="Кофе флет-вайт в банке." width="130" height="188">
                 </a>
                 <h3 class="catalog-list__heading">Декаф Флэт Уайт</h3>
-                <p class="catalog-list__text">Кофе без кофеина из Эфиопии
+                <p class="catalog-list__text">Кофе без кофеина из Эфиопии <br>
                   с натуральным фермерским молоком</p>
                 <div class="catalog-list__price-and-cart-wrapper">
                   <b class="catalog-list__item-price">225₽</b>
@@ -367,7 +368,7 @@
                   <img class="catalog-list__image" loading="lazy" src="images/catalog-black-coffee-mobile.jpg" srcset="images/catalog-black-coffee-mobile@2x.jpg 2x" alt="Кофе флет-вайт в банке." width="130" height="188">
                 </a>
                 <h3 class="catalog-list__heading">Декаф Флэт Уайт</h3>
-                <p class="catalog-list__text">Кофе без кофеина из Эфиопии
+                <p class="catalog-list__text">Кофе без кофеина из Эфиопии<br>
                   с натуральным фермерским молоком</p>
                 <div class="catalog-list__price-and-cart-wrapper">
                   <b class="catalog-list__item-price">225₽</b>
@@ -384,7 +385,7 @@
                   <img class="catalog-list__image" loading="lazy" src="images/catalog-pink-coffee-mobile.jpg" srcset="images/catalog-pink-coffee-mobile@2x.jpg 2x" alt="Кофе флет-вайт в банке." width="130" height="188">
                 </a>
                 <h3 class="catalog-list__heading">Декаф Флэт Уайт</h3>
-                <p class="catalog-list__text">Кофе без кофеина из Эфиопии
+                <p class="catalog-list__text">Кофе без кофеина из Эфиопии<br>
                   с натуральным фермерским молоком</p>
                 <div class="catalog-list__price-and-cart-wrapper">
                   <b class="catalog-list__item-price">225₽</b>
@@ -401,7 +402,7 @@
                   <img class="catalog-list__image" loading="lazy" src="images/catalog-brown-coffee-mobile.jpg" srcset="images/catalog-brown-coffee-mobile@2x.jpg 2x" alt="Кофе флет-вайт в банке." width="130" height="188">
                 </a>
                 <h3 class="catalog-list__heading">Декаф Флэт Уайт</h3>
-                <p class="catalog-list__text">Кофе без кофеина из Эфиопии
+                <p class="catalog-list__text">Кофе без кофеина из Эфиопии<br>
                   с натуральным фермерским молоком</p>
                 <div class="catalog-list__price-and-cart-wrapper">
                   <b class="catalog-list__item-price">225₽</b>
@@ -418,7 +419,7 @@
                   <img class="catalog-list__image" loading="lazy" src="images/catalog-yellow-coffee-mobile.jpg" srcset="images/catalog-yellow-coffee-mobile@2x.jpg 2x" alt="Кофе флет-вайт в банке." width="130" height="188">
                 </a>
                 <h3 class="catalog-list__heading">Декаф Флэт Уайт</h3>
-                <p class="catalog-list__text">Кофе без кофеина из Эфиопии
+                <p class="catalog-list__text">Кофе без кофеина из Эфиопии<br>
                   с натуральным фермерским молоком</p>
                 <div class="catalog-list__price-and-cart-wrapper">
                   <b class="catalog-list__item-price">225₽</b>
@@ -439,7 +440,7 @@
                     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M4.80847 -5.20835e-08L6 1.23899L2.38306 5L6 8.76101L4.80847 10L-2.18557e-07 5L4.80847 -5.20835e-08Z" fill="#7859CF"/>
                     </svg>
-                    <span>Предыдущая страница.</span>
+                    <span>Назад</span>
                   </a>
                 </li>
                 <li class="pagination__item">
@@ -456,7 +457,7 @@
                     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M1.19153 -5.20835e-08L5.41581e-08 1.23899L3.61694 5L3.82956e-07 8.76101L1.19153 10L6 5L1.19153 -5.20835e-08Z" fill="#7859CF"/>
                     </svg>
-                    <span>Следующая страница.</span>
+                    <span>Вперед</span>
                   </a>
                 </li>
               </ul>

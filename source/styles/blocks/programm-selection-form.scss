@@ -1,5 +1,39 @@
+.programm-selection-form {
+  @media (min-width: $tablet) {
+    display: grid;
+    row-gap: 40px;
+    grid-template-columns: repeat(3, 222px);
+    column-gap: 30px;
+    grid-template-areas:
+      "price milk country"
+      "buttons buttons buttons";
+  }
+}
+
+.programm-selection-form__range {
+  @media (min-width: $tablet) {
+    grid-area: price;
+  }
+}
+
 .programm-selection-form__filter-group {
   margin-top: 31px;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+  }
+}
+
+.programm-selection-form__filter-group--milk {
+  @media (min-width: $tablet) {
+    grid-area: milk;
+  }
+}
+
+.programm-selection-form__filter-group--country {
+  @media (min-width: $tablet) {
+    grid-area: country;
+  }
 }
 
 .programm-selection-form__buttons-wrapper {
@@ -7,6 +41,13 @@
   display: flex;
   flex-direction: column;
   gap: 22px;
+
+  @media (min-width: $tablet) {
+    grid-area: buttons;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+  }
 }
 
 .programm-selection-form__button--reset {

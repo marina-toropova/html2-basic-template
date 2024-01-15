@@ -5,35 +5,10 @@
 
 .range__scale {
   position: relative;
-/*   height: 2px; */
-/*   background-color: $alt-light-grey; */
-/*   width: 100%; */
-}
 
-/* .range__bar {
-  position: absolute;
-  height: 4px;
-  width: 93%;
-  background-color: $alt-primary-lighter;
-} */
-
-.range__toggle {
-/*   position: absolute;
-  width: 24px;
-  height: 24px;
-  border-color: $alt-primary-lighter;
-  background: $base-white;
-  border-radius: 50%;
-  cursor: pointer; */
-  top: -10px;
-
-/*   &--min {
-    left: 0;
+  @media (min-width: $tablet) {
+    width: 223px;
   }
-
-  &--max {
-    right: 0;
-  } */
 }
 
 .range__wrapper-inputs {
@@ -44,6 +19,11 @@
   margin-top: 26px;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    width: 223px;
+    margin-top: 22px;
+  }
 }
 
 .range__input {
@@ -53,12 +33,16 @@
   background-color: $base-white;
   border: 2px solid $alt-primary-lighter;
   appearance: textfield;
-  padding: 6px 10px;
+  padding: 6px 10px 6px 25px;
   border-radius: 4px;
 
   &:placeholder-shown {
     color: $base-grey;
     line-height: 24px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 87px;
   }
 }
 
@@ -67,38 +51,3 @@
   font-size: 26px;
   line-height: 24px;
 }
-
-// experimental
-
-/* .noUi-base {
-  position: relative;
-  height: 2px;
-  background-color: $alt-light-grey;
-  width: 100%;
-}
-
-.noUi-origin {
-  position: absolute;
-  height: 4px;
-  width: 93%;
-  background-color: $alt-primary-lighter;
-}
-
-.noUi-handle {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border-color: $alt-primary-lighter;
-  background: $base-white;
-  border-radius: 50%;
-  cursor: pointer;
-  top: -10px;
-
-  &-lower {
-    left: 0;
-  }
-
-  &-upper {
-    right: 0;
-  }
-} */
