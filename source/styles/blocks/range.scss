@@ -5,35 +5,35 @@
 
 .range__scale {
   position: relative;
-  height: 2px;
-  background-color: $alt-light-grey;
-  width: 100%;
+/*   height: 2px; */
+/*   background-color: $alt-light-grey; */
+/*   width: 100%; */
 }
 
-.range__bar {
+/* .range__bar {
   position: absolute;
   height: 4px;
   width: 93%;
   background-color: $alt-primary-lighter;
-}
+} */
 
 .range__toggle {
-  position: absolute;
+/*   position: absolute;
   width: 24px;
   height: 24px;
   border-color: $alt-primary-lighter;
   background: $base-white;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: pointer; */
   top: -10px;
 
-  &--min {
+/*   &--min {
     left: 0;
   }
 
   &--max {
     right: 0;
-  }
+  } */
 }
 
 .range__wrapper-inputs {
@@ -67,3 +67,38 @@
   font-size: 26px;
   line-height: 24px;
 }
+
+// experimental
+
+/* .noUi-base {
+  position: relative;
+  height: 2px;
+  background-color: $alt-light-grey;
+  width: 100%;
+}
+
+.noUi-origin {
+  position: absolute;
+  height: 4px;
+  width: 93%;
+  background-color: $alt-primary-lighter;
+}
+
+.noUi-handle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: $alt-primary-lighter;
+  background: $base-white;
+  border-radius: 50%;
+  cursor: pointer;
+  top: -10px;
+
+  &-lower {
+    left: 0;
+  }
+
+  &-upper {
+    right: 0;
+  }
+} */

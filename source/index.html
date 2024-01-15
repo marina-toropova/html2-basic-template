@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/index.js" defer type="module"></script>
   </head>
   <body class="page__body">
 
@@ -215,14 +215,6 @@
 
               <div class="range__scale-wrapper">
                 <div class="range__scale">
-                  <div class="range__bar">
-                    <button class="range__toggle range__toggle--min" type="button">
-                      <span class="visually-hidden">Изменить минимальную цену.</span>
-                    </button>
-                    <button class="range__toggle range__toggle--max" type="button">
-                      <span class="visually-hidden">Изменить максимальную цену.</span>
-                    </button>
-                  </div>
                 </div>
               </div>
 
@@ -476,5 +468,6 @@
       </section>
 
     </main>
+    <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
   </body>
 </html>
