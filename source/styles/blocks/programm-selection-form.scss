@@ -1,5 +1,5 @@
 .programm-selection-form {
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop - 1px) {
     display: grid;
     row-gap: 40px;
     grid-template-columns: repeat(3, 222px);
@@ -21,6 +21,10 @@
 
   @media (min-width: $tablet) {
     margin-top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 30px;
   }
 }
 
@@ -48,9 +52,25 @@
     justify-content: center;
     margin: 0;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 39px;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+.programm-selection-form__button {
+  @media (min-width: $desktop) {
+    padding: 8px 27px;
+  }
 }
 
 .programm-selection-form__button--reset {
   color: $base-primary;
   background-color: $base-white;
+
+  @media (min-width: $desktop) {
+    padding: 8px 33px;
+  }
 }

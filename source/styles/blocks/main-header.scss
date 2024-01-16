@@ -30,6 +30,10 @@
   display: flex;
   column-gap: 20px;
   align-items: center;
+
+  @media (min-width: $desktop) {
+    column-gap: 18px;
+  }
 }
 
 

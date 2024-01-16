@@ -1,15 +1,12 @@
 .slider {
   position: relative;
-/*   min-width: 320px; */
   min-height: 656px;
 
   @media (min-width: $tablet) {
-/*     max-width: 768px; */
     min-height: 640px;
   }
 
   @media (min-width: $desktop) {
-/*     max-width: 1440px; */
     min-height: 714px;
   }
 }
@@ -38,18 +35,15 @@
   }
 
   @media (min-width: $desktop) {
-    display: grid;
-    grid-template-rows: 56% 2% 45% 6%;
-    grid-template-columns: 51% 49%;
-    grid-template-areas:
-      ". text"
-      ". title"
-      ". description"
-      ". wrapper";
+    padding-left: 16.8%;
+    align-items: stretch;
   }
 }
 
 .slider__link {
+  display: block;
+  text-align: center;
+
   @media (min-width: $tablet) {
     position: absolute;
     top: 352px;
@@ -57,7 +51,7 @@
 
   @media (min-width: $desktop) {
     top: 30px;
-    left: 65px;
+    left: 54px;
   }
 }
 
@@ -123,8 +117,9 @@
 
   @media (min-width: $desktop) {
     grid-area: text;
-    margin: 145px 0 0 0;
+    margin: 126px 0 0 0;
     justify-self: self-start;
+    text-align: left;
   }
 }
 
@@ -201,7 +196,7 @@
   margin-left: 14px;
 
   @media (min-width: $desktop) {
-    margin-left: 16px;
+    margin-left: 15px;
   }
 }
 
@@ -217,6 +212,7 @@
 
   @media (min-width: $desktop) {
     grid-area: wrapper;
+    margin-top: 40px;
   }
 }
 

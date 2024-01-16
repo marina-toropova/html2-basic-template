@@ -27,6 +27,10 @@
     margin-top: 30px;
     gap: 30px;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 49px;
+  }
 }
 
 .catalog-list__item {
@@ -38,6 +42,10 @@
 
   @media (min-width: $tablet) {
     padding: 50px 30px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -69,6 +77,10 @@
   @media (min-width: $tablet) {
     width: 289px;
     margin-top: 9px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 257px;
   }
 
   br {
@@ -113,5 +125,9 @@
   @media (min-width: $tablet) {
     margin-top: 80px;
     float: right;
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: 69px;
   }
 }

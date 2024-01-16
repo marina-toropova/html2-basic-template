@@ -8,14 +8,48 @@
   @media (min-width: $tablet) {
     padding: 79px 0 200px;
   }
+
+  @media (min-width: $desktop) {
+    padding: 100px 0 120px;
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "subtitle subtitle "
+      "form catalog"
+      "form catalog";
+    grid-template-columns: 318px 1011px;
+    column-gap: 30px;
+  }
+}
+
+.catalog__title {
+  @media (min-width: $desktop) {
+    grid-area: title;
+  }
+}
+
+.catalog__subtitle {
+  @media (min-width: $desktop) {
+    grid-area: subtitle;
+  }
 }
 
 .catalog__form {
   margin-top: 20px;
+
+  @media (min-width: $desktop) {
+    grid-area: form;
+    padding-top: 38px;
+    margin-top: 0;
+  }
 }
 
 .catalog__list {
   margin-top: 43px;
+
+  @media (min-width: $desktop) {
+    grid-area: catalog;
+  }
 }
 
 .catalog__subtitle.title-secondary {
@@ -23,6 +57,13 @@
 }
 
 .catalog__label-select-wrapper {
-  display: inline-block;
-  margin-left: 61%;
+  @media (min-width: $tablet) {
+    display: inline-block;
+    float: right;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    margin-right: 6px;
+  }
 }

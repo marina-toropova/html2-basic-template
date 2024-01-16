@@ -9,6 +9,10 @@
   @media (min-width: $tablet) {
     width: 223px;
   }
+
+  @media (min-width: $desktop) {
+    width: auto;
+  }
 }
 
 .range__wrapper-inputs {
@@ -20,7 +24,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop - 1px) {
     width: 223px;
     margin-top: 22px;
   }
@@ -33,7 +37,7 @@
   background-color: $base-white;
   border: 2px solid $alt-primary-lighter;
   appearance: textfield;
-  padding: 6px 10px 6px 25px;
+  padding: 6px 10px 6px 10px;
   border-radius: 4px;
 
   &:placeholder-shown {
@@ -43,6 +47,12 @@
 
   @media (min-width: $tablet) {
     width: 87px;
+    padding: 6px 10px 6px 25px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 134px;
+    padding: 6px 10px 6px 10px;
   }
 }
 
