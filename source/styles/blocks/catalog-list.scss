@@ -22,6 +22,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 
   @media (min-width: $tablet) {
     margin-top: 30px;
