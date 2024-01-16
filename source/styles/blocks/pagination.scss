@@ -42,13 +42,17 @@
   }
 
   &--prev {
-    padding-left: 20px;
-    padding-right: 20px;
+    @media (min-width: $tablet) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   &--next {
-    padding-left: 20px;
-    padding-right: 20px;
+    @media (min-width: $tablet) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   &:hover,

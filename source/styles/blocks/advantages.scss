@@ -32,9 +32,12 @@
     margin-top: 60px;
   }
 
+  @media (min-width: $tablet + 1px) {
+    justify-content: center;
+  }
+
   @media (min-width: $desktop) {
     margin-top: 80px;
-    justify-content: center;
   }
 }
 

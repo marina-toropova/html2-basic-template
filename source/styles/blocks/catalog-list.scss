@@ -28,6 +28,10 @@
     gap: 30px;
   }
 
+  @media (min-width: $tablet + 1px) and (max-width: $desktop - 1px) {
+    justify-content: center;
+  }
+
   @media (min-width: $desktop) {
     margin-top: 49px;
   }
