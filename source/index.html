@@ -16,9 +16,9 @@
         <a href="#" class="main-header__logo logo">
 
           <picture>
-            <source media="(min-width: 1440px)" srcset="./images/logo-drink2go-desktop.svg" width="170" height="36">
-            <source media="(min-width: 768px)" srcset="./images/logo-drink2go.svg" width="82" height="36">
-            <img src="./images/logo-mobile.svg" width="32" height="36" alt="Логотип.">
+            <source media="(min-width: 1440px)" srcset="./images/icons/logo-drink2go-desktop.svg" width="170" height="36">
+            <source media="(min-width: 768px)" srcset="./images/icons/logo-drink2go.svg" width="82" height="36">
+            <img src="./images/icons/logo-mobile.svg" width="32" height="36" alt="Логотип магазина Drink2Go.">
           </picture>
 
           <span class="main-header__text">Интернет-магазин кофейных напитков</span>
@@ -41,7 +41,7 @@
           <span>корзина</span>
         </a>
 
-        <nav class="main-header__nav nav nav--closed">
+        <nav class="main-header__nav nav js-toggle-button nav--closed">
 
           <button class="nav__toggle nav__toggle--closed" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -73,14 +73,14 @@
           <h1 class="visually-hidden">Интернет-магазин кофе в банке.</h1>
           <div class="slider">
 
-            <button class="slider__button slider__button--previous">
+            <button class="slider__button slider-button-prev slider__button--previous">
             <span class="visually-hidden">Предыдущее фото.</span>
             <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9.71661 0L11 1.32082L2.56677 10L11 18.6792L9.71661 20L0 10L9.71661 0Z" fill="#7859CF"/>
             </svg>
             </button>
 
-            <button class="slider__button slider__button--next">
+            <button class="slider__button slider-button-next slider__button--next">
             <span class="visually-hidden">Следующее фото.</span>
             <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.28339 0L0 1.32082L8.43323 10L0 18.6792L1.28339 20L11 10L1.28339 0Z" fill="#7859CF"/>
@@ -163,7 +163,7 @@
               </li>
             </ul>
 
-            <div class="slider__wrapper">
+            <div class="slider__wrapper slider-pagination">
               <div class="slider__dot slider__dot--active"></div>
               <div class="slider__dot"></div>
               <div class="slider__dot"></div>
@@ -479,7 +479,7 @@
         </div>
       </section>
 
-      <section class="map">
+      <section class="map" data-test="map">
         <h2 class="visually-hidden">Карта.</h2>
         <picture>
           <source type="image/webp" media="(min-width: 1440px)"
