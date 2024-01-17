@@ -1,8 +1,29 @@
+.main-footer__container {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-areas:
+      "logo-social logo-social logo-social"
+      "web-store media contacts"
+      "academy academy academy";
+    column-gap: 30px;
+    row-gap: 25px;
+    grid-template-columns: repeat(3, 223px);
+    padding-bottom: 20px;
+  }
+}
+
 .main-footer__logo-social-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 38px;
   padding: 15px 0 15px;
+  grid-area: logo-social;
+
+  @media (min-width: $tablet) {
+    justify-content: space-between;
+    padding: 35px 0 0;
+  }
 }
 
 .main-footer__links {
@@ -19,6 +40,28 @@
       display: block;
       left: -1000%;
       top: 0;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
+
+  &--web-store {
+    @media (min-width: $tablet) {
+      grid-area: web-store;
+    }
+  }
+
+  &--media {
+    @media (min-width: $tablet) {
+      grid-area: media;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $tablet) {
+      grid-area: contacts;
     }
   }
 }
@@ -134,6 +177,13 @@
       left: -1000%;
       top: 0;
     }
+  }
+
+  @media (min-width: $tablet) {
+    grid-area: academy;
+    justify-self: center;
+    padding: 0;
+    padding-top: 4px;
   }
 }
 
