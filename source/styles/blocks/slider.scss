@@ -34,7 +34,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-left: 16.8%;
+    padding-left: 695px;
     align-items: stretch;
   }
 }
@@ -50,7 +50,7 @@
 
   @media (min-width: $desktop) {
     top: 30px;
-    left: 54px;
+    left: 65px;
   }
 }
 
@@ -85,10 +85,6 @@
 
   &:active {
     background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
-  }
-
-  @media (min-width: $tablet) {
-
   }
 }
 

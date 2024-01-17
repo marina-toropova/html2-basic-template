@@ -4,4 +4,3 @@ import '../vendor/nouislider.min';
 import './burger-menu';
 import './slider';
 import './range-slider';
-

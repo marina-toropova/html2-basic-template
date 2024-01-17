@@ -10,6 +10,15 @@
     grid-template-columns: repeat(3, 223px);
     padding-bottom: 20px;
   }
+
+  @media (min-width: $desktop) {
+    grid-template-areas:
+      "logo-social web-store media contacts"
+      "academy academy academy academy";
+    grid-template-columns: repeat(4, 317px);
+    row-gap: 20px;
+    padding: 45px 0 40px;
+  }
 }
 
 .main-footer__logo-social-wrapper {
@@ -23,6 +32,28 @@
   @media (min-width: $tablet) {
     justify-content: space-between;
     padding: 35px 0 0;
+  }
+
+  @media (min-width: $desktop) {
+    justify-self: flex-start;
+    padding: 0;
+    margin-top: -8px;
+  }
+}
+
+.main-footer__logo {
+  @media (min-width: $desktop) {
+    margin-top: -10px;
+    gap: 46px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.main-footer__social {
+  @media (min-width: $desktop) {
+    align-self: flex-start;
   }
 }
 

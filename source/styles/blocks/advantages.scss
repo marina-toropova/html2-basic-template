@@ -54,7 +54,6 @@
       top: 0;
       left: 0;
     }
-
   }
 
   &--speed {
@@ -64,13 +63,17 @@
       width: 50px;
       top: 35px;
       background-image: url("../../images/icons/features-speed.svg");
+    }
 
-      @media (min-width: $tablet) {
+    @media (min-width: $tablet) {
+      &::before {
         top: 3px;
         left: 10px;
       }
+    }
 
-      @media (min-width: $desktop) {
+    @media (min-width: $desktop) {
+      &::before {
         top: 0;
         left: 42%;
       }
@@ -85,12 +88,25 @@
       top: 32px;
       background-image: url("../../images/icons/features-comfort.svg");
 
-      @media (min-width: $tablet) {
+      /*       @media (min-width: $tablet) {
         top: -1px;
         left: 10px;
       }
 
       @media (min-width: $desktop) {
+        left: 42%;
+      } */
+    }
+
+    @media (min-width: $tablet) {
+      &::before {
+        top: -1px;
+        left: 10px;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      &::before {
         left: 42%;
       }
     }
@@ -104,13 +120,17 @@
       top: 32px;
       left: 42%;
       background-image: url("../../images/icons/features-freshness.svg");
+    }
 
-      @media (min-width: $tablet) {
-          top: 0;
-          left: 14px;
+    @media (min-width: $tablet) {
+      &::before {
+        top: 0;
+        left: 14px;
       }
+    }
 
-      @media (min-width: $desktop) {
+    @media (min-width: $desktop) {
+      &::before {
         top: -2px;
         left: 44%;
       }
@@ -125,13 +145,17 @@
       top: 32px;
       left: 42%;
       background-image: url("../../images/icons/features-eco-friendliness.svg");
+    }
 
-      @media (min-width: $tablet) {
+    @media (min-width: $tablet) {
+      &::before {
         top: 3px;
         left: 13px;
       }
+    }
 
-      @media (min-width: $desktop) {
+    @media (min-width: $desktop) {
+      &::before {
         top: -1px;
         left: 43%;
       }
