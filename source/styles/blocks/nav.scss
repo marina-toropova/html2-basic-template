@@ -106,6 +106,7 @@
   &--current {
     @media (min-width: $tablet) {
       color: $base-primary;
+      cursor: default;
     }
   }
 

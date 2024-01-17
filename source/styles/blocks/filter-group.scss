@@ -76,6 +76,19 @@
   background-color: $alt-light-grey;
 }
 
+.filter-group__input[type="radio"]:hover + .filter-group__mark,
+.filter-group__input[type="radio"]:focus + .filter-group__mark {
+  border-color: $alt-primary-lighter;
+
+  &::before {
+    background-color: $alt-primary-opacity;
+  }
+}
+
+.filter-group__input[type="radio"]:disabled:hover + .filter-group__mark {
+  border-color: $alt-light-grey;
+}
+
 .filter-group--country {
   .filter-group__mark {
     display: inline-block;
@@ -91,6 +104,7 @@
       content: "";
       height: 21px;
       width: 20px;
+      top: 1px;
       left: 2px;
       bottom: 2px;
       background-color: $base-white;
@@ -102,6 +116,16 @@
   .filter-group__control {
     padding-left: 52px;
   }
+}
+
+.filter-group__input[type="checkbox"]:hover + .filter-group__mark,
+.filter-group__input[type="checkbox"]:focus + .filter-group__mark {
+  outline: 2px solid $base-primary;
+}
+
+.filter-group__input[type="checkbox"]:disabled:hover + .filter-group__mark,
+.filter-group__input[type="checkbox"]:disabled:focus + .filter-group__mark {
+  outline: none;
 }
 
 .filter-group__input[type="checkbox"]:checked + .filter-group__mark {

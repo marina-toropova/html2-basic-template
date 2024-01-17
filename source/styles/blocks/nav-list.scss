@@ -6,12 +6,12 @@
 
   @include list-reset;
   background-color: $base-white;
-  position: absolute;
-  left: -260px;
+  position: fixed;
   width: 100vw;
+  left: 0;
+  right: -20px;
 
   @media (max-width: $tablet - 1px) {
-    position: absolute;
     z-index: 2;
   }
 

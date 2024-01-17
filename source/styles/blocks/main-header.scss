@@ -10,6 +10,10 @@
   grid-template-columns: 32px 88px 60px 60px 60px;
   grid-template-areas: "logo . account basket nav";
 
+  @media (min-width: 321px) {
+    grid-template-columns: 32px auto 60px 60px 60px;
+  }
+
   @media (min-width: $tablet) {
     grid-template-columns: 82px 67px 400px 60px 60px 60px;
     grid-template-areas: "logo . nav . account basket";
@@ -21,7 +25,7 @@
 
   @media (min-width: $desktop) {
     grid-template-areas: "logo . nav . account . basket";
-    grid-template-columns: 316px 162px 491px 129px 112px 20px 129px;
+    grid-template-columns: 316px 162px 491px auto 112px 20px 129px;
   }
 }
 
@@ -39,29 +43,29 @@
 .main-header__link {
   display: flex;
   justify-content: center;
-  padding-bottom: 4px;
+  padding: 22px;
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  &:hover path,
+  &:focus path,
+  &:active path {
+    fill: $base-primary;
+  }
+
+  &:active path {
+    background-color: $base-secondary;
+  }
 
   @media (min-width: $desktop) {
     padding: 32px 20px;
-
-    &:hover,
-    &:focus {
-      color: $base-primary;
-    }
-
-    &:active {
-      background-color: $base-secondary;
-    }
-
-    &:hover path,
-    &:focus path,
-    &:active path {
-      fill: $base-primary;
-    }
-
-    &:active path {
-      background-color: $base-secondary;
-    }
   }
 }
 

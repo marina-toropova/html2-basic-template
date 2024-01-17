@@ -201,6 +201,10 @@
   align-items: center;
   gap: 6px;
 
+  @media (min-width: 321px) and (max-width: $tablet - 1px) {
+    justify-content: center;
+  }
+
   @media (min-width: $tablet) {
     margin-left: 0;
   }
