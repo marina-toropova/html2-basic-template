@@ -1,0 +1,154 @@
+.main-footer__logo-social-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  padding: 15px 0 15px;
+}
+
+.main-footer__links {
+  padding: 20px 0;
+  position: relative;
+
+  @media (max-width: $only-mobile) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 10000vw;
+      background-color: $base-secondary;
+      display: block;
+      left: -1000%;
+      top: 0;
+    }
+  }
+}
+
+.main-footer__links--contacts .main-footer__item {
+  padding-left: 19px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 16px;
+    top: 0;
+    left: 0;
+  }
+
+  &--address {
+    &::before {
+      mask-image: url("../../images/icons/address.svg");
+      background-color: $base-primary;
+    }
+  }
+
+  &--tel {
+    &::before {
+      mask-image: url("../../images/icons/phone.svg");
+      background-color: $base-primary;
+    }
+  }
+}
+
+.main-footer__title {
+  color: $base-primary;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  margin: 0;
+}
+
+.main-footer__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 13px;
+
+  &--contacts {
+    margin-top: 20px;
+    gap: 16px;
+  }
+}
+
+.main-footer__item {
+  position: relative;
+}
+
+.main-footer__link {
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  display: block;
+
+  &:not(.main-footer__link--tel) {
+    padding: 8px 0;
+  }
+
+  &:hover,
+  &:active {
+    color: $base-primary;
+    font-weight: 700;
+  }
+
+  &:focus {
+    color: $alt-primary-darker;
+  }
+
+  &--tel {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.main-footer__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.main-footer__academy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  position: relative;
+  padding: 22px 0 10px;
+
+  &:hover .main-footer__logo-academy-link,
+  &:active .main-footer__logo-academy-link {
+    background-color: $base-primary;
+  }
+
+  &:focus .main-footer__logo-academy-link {
+    background-color: $alt-primary-darker;
+  }
+
+  @media (max-width: $only-mobile) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 10000vw;
+      background-color: $base-secondary;
+      display: block;
+      left: -1000%;
+      top: 0;
+    }
+  }
+}
+
+.main-footer__academy-link {
+  color: $base-grey;
+  font-weight: 400;
+  display: block;
+}
+
+.main-footer__logo-academy-link {
+  display: block;
+  width: 12px;
+  height: 16px;
+  mask-image: url("../../images/icons/html-academy-logo.svg");
+  mask-repeat: no-repeat;
+  background-color: $base-grey;
+  padding: 20px 0;
+}

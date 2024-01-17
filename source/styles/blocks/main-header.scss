@@ -36,7 +36,6 @@
   }
 }
 
-
 .main-header__link {
   display: flex;
   justify-content: center;
@@ -113,10 +112,7 @@
 }
 
 .main-header__text {
-  display: none;
-
   @media (min-width: $desktop) {
-    display: block;
     width: 129px;
   }
 }
