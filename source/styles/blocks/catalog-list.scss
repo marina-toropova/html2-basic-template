@@ -2,10 +2,6 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-
-  @media (min-width: $tablet) {
-    /* margin-right: 3px; */
-  }
 }
 
 .catalog-list__select {
@@ -35,21 +31,6 @@
   &:active {
     outline: none;
     background-color: $base-secondary;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: tomato;
-    width: 10px;
-    height: 6px;
-    background-image: url("../../images/icons/address.svg");
-    top: 50%;
-    right: 5px;
-    transform: translateY(-50%); /* позиционирует стелочку вертикально по центру */
-    border-left: 5px solid $base-primary; /* устанавливаем размер и цвет левой части стелочки */
-    border-right: 5px solid $base-primary; /* устанавливаем размер и цвет правой части стелочки */
-    border-top: 5px solid #000; /* устанавливаем размер и цвет верхней части стелочки */
   }
 }
 

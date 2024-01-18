@@ -1,5 +1,6 @@
 .nav-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   min-height: 225px;
@@ -30,7 +31,6 @@
     background-color: transparent;
     position: static;
     min-height: auto;
-    width: auto;
   }
 
   @media (min-width: $desktop) {
